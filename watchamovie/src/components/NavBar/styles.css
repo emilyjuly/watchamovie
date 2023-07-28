@@ -1,9 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+nav {
+  background: linear-gradient(90deg, #efd5ff 0%, rgb(150, 0, 209) 100%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-space {
+  display: flex;
+}
+
+.title {
+  font-family: "Audiowide", cursive;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  padding: 5px;
+  margin: auto;
+}
+
 .logo {
   margin: 10px;
   width: 100px;
   height: 100px;
-}
-
-.search-icon {
-  font-size: 16px;
 }

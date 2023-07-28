@@ -1,0 +1,33 @@
+.search-icon {
+  font-size: 18px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: right;
+  padding: 5px;
+}
+
+.input {
+  height: 30px;
+  width: 300px;
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+
+.btn {
+  background-color: rgb(150, 0, 209);
+  color: white;
+  height: 30px;
+  width: 40px;
+  border: none;
+  outline: none;
+  border-radius: 0px 5px 5px 0px;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #efd5ff 0%, rgb(150, 0, 209) 100%);
+}
