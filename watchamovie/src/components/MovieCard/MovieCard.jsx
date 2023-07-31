@@ -9,7 +9,11 @@ const MovieCard = ({ movie, showLink = true }) => {
   return (
     <div className="movie-card">
       <img
-        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+        src={
+          movie.poster_path !== null
+            ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+            : `\popcorn.png`
+        }
         alt={movie.title}
       />
       <h2>{movie.title}</h2>

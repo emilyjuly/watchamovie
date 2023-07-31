@@ -27,7 +27,10 @@ const Home = () => {
             return <MovieCard movie={movie} key={movie.id} />;
           })
         ) : (
-          <p>Carregando...</p>
+          <div className="loader">
+            Loading
+            <span></span>
+          </div>
         )}
       </div>
     </div>
