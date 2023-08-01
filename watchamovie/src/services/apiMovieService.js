@@ -1,8 +1,8 @@
 import { api_movie } from "../boot/axios";
 
 class apiMovieService {
-  static async getPopularMovies() {
-    const { data } = await api_movie.get("movie/popular");
+  static async getTrendingMovies() {
+    const { data } = await api_movie.get("trending/movie/week");
     return data.results;
   }
 
@@ -12,8 +12,13 @@ class apiMovieService {
   }
 
   static async getOnlyMovie(id) {
-    const { data } = await api_movie.get(`movie/${id}`)
+    const { data } = await api_movie.get(`movie/${id}`);
     return data;
+  }
+
+  static async getGenres() {
+    const { data } = await api_movie.get(`genre/movie/list`);
+    return data.genres;
   }
 }
 

@@ -1,5 +1,6 @@
 .search-icon {
-  font-size: 25px;
+  font-size: 23px;
+  color: white;
 }
 
 .search-container {
@@ -7,7 +8,8 @@
   justify-content: center;
   flex-direction: column;
   padding: 5px;
-  height: 210px;
+  height: 180px;
+  background-size: 300% 300%;
   backdrop-filter: blur(1rem);
   transition: 0.5s;
   animation: gradient_301 5s ease infinite;
@@ -33,10 +35,15 @@
 
 .navbar-title {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
   margin-left: 50px;
   letter-spacing: 1px;
+}
+
+.phrase {
+  color: #3bf8ff;
+  font-size: 25px;
 }
 
 .search-input {
@@ -49,7 +56,7 @@
 
 .search-input input {
   width: 50%;
-  height: 50px;
+  height: 36px;
   border-radius: 20px 0px 0px 20px;
   padding: 10px;
   font-size: 16px;
@@ -57,7 +64,7 @@
 
 .btn-search {
   background: linear-gradient(90deg, #3bf8ff 0%, rgb(0, 0, 209) 100%);
-  height: 50px;
+  height: 36px;
   width: 50px;
   outline: none;
   border: none;
@@ -68,21 +75,7 @@
 
 .btn-search:hover {
   transition: 0.5s;
-  background: linear-gradient(90deg, rgb(0, 0, 209) 0%, #f3f0f5 100%);
-}
-
-@keyframes gradient_301 {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  background: linear-gradient(90deg, rgb(0, 0, 209) 0%, #3bf8ff 100%);
 }
 
 .input {
@@ -107,4 +100,18 @@
 
 .btn:hover {
   background: linear-gradient(90deg, #efd5ff 0%, rgb(150, 0, 209) 100%);
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

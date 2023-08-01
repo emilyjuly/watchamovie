@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 
 nav {
-  background: linear-gradient(90deg, #3bf8ff 0%, #1500fd 100%);
+  background: linear-gradient(90deg, #3bf8ff 0%, rgb(0, 0, 209) 100%);
   display: flex;
   justify-content: space-between;
   height: 60px;

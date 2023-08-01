@@ -32,8 +32,10 @@ const Search = () => {
           })
         ) : (
           <div className="loader">
-            Loading
-            <span></span>
+            <div className="loader-bar bar-1"></div>
+            <div className="loader-bar bar-2"></div>
+            <div className="loader-bar bar-3"></div>
+            <div className="loader-bar bar-4"></div>
           </div>
         )}
       </div>
