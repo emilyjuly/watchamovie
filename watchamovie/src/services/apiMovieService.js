@@ -10,6 +10,11 @@ class apiMovieService {
     const { data } = await api_movie.get(`search/movie?query=${query}`);
     return data.results;
   }
+
+  static async getOnlyMovie(id) {
+    const { data } = await api_movie.get(`movie/${id}`)
+    return data;
+  }
 }
 
 export default apiMovieService;
