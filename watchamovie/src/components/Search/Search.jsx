@@ -20,16 +20,23 @@ const Search = () => {
   return (
     <div>
       <form className="search-container" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Search for a movie"
-          className="input"
-          onChange={(e) => setSearch(e.target.value)}
-          value={search}
-        />
-        <button type="submit" className="btn">
-          <BiSearchAlt className="search-icon" />
-        </button>
+        <div id="container-stars">
+          <div><p className="navbar-title">
+            Welcome! <br /> What are you looking for to watch today?
+          </p></div>
+          <div className="search-input">
+            <input
+              type="text"
+              placeholder="Search for a movie"
+              className="input"
+              onChange={(e) => setSearch(e.target.value)}
+              value={search}
+            />
+            <button type="submit" className="btn-search">
+              <BiSearchAlt className="search-icon" />
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );

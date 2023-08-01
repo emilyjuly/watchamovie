@@ -22,9 +22,6 @@ const Search = () => {
 
   return (
     <div className="container">
-      <div className="background-container">
-        <div className="stars"></div>
-      </div>
       <h2 className="query-text-title">
         Results for: <span className="query-text">{query}</span>
       </h2>

@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <nav id="navbar">
       <Link to="/" className="logo-space">
-        <img src="/tv.png" alt="popcorn" className="logo" />{" "}
+        <img src="/popcorn.png" alt="popcorn" className="logo" />
         <div className="title">Watch a movie</div>
       </Link>
     </nav>

@@ -18,9 +18,6 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className="background-container">
-        <div className="stars"></div>
-      </div>
       <div className="movies-container">
         {popularMovies.length > 0 ? (
           popularMovies.map((movie) => {

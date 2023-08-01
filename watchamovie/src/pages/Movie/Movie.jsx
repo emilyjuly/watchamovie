@@ -26,9 +26,6 @@ const Movie = () => {
 
   return (
     <div className="movie-page">
-      <div className="background-container">
-        <div className="stars"></div>
-      </div>
       {movie ? <>
         <img
           src={
