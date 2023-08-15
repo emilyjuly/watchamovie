@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import apiMovieService from "../../services/apiMovieService";
 import MovieCard from "../MovieCard/MovieCard";
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import "./styles.css";
 
@@ -21,13 +21,13 @@ const Trending = () => {
     return (
         <div className="carousel-container">
             <div className="trending-title">
-                <h2 >Trending </h2>
-                <div class="playing">
-                    <div class="greenline line-1"></div>
-                    <div class="greenline line-2"></div>
-                    <div class="greenline line-3"></div>
-                    <div class="greenline line-4"></div>
-                    <div class="greenline line-5"></div>
+                <h2>Trending </h2>
+                <div className="playing">
+                    <div className="greenline line-1"></div>
+                    <div className="greenline line-2"></div>
+                    <div className="greenline line-3"></div>
+                    <div className="greenline line-4"></div>
+                    <div className="greenline line-5"></div>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@ const Trending = () => {
                 )}
             </Carousel>
         </div>
-    )
+    );
 };
 
 export default Trending;

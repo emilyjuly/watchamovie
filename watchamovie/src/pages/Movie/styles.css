@@ -1,7 +1,19 @@
 .movie-page {
     color: white;
     display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 2rem auto;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px auto;
+    padding: 25px;
+}
+
+.left {
+    background: linear-gradient(90deg, #3bf8ff 0%, rgb(0, 0, 209) 100%);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.left img {
+    margin: auto;
 }
