@@ -57,7 +57,7 @@ const Movie = () => {
                                 <div className="info-title"><h2>{movie.title}</h2>
                                     <div className="genres-container">
                                         {movie.genres.length > 0 && movie.genres.map((genre) => (<div key={genre.id} className="genres">
-                                            {genre.name}ㅤ
+                                            {`- ${genre.name} -`}
                                         </div>))}
                                     </div>
 

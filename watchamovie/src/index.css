@@ -99,7 +99,11 @@ a:hover {
 
   .movie-card {
     display: flex;
-    flex-direction: column;
+    margin-bottom: 3.5rem;
+  }
+
+  .carousel-container {
+    margin-top: 0px;
   }
 
   .movie-img {
@@ -134,8 +138,12 @@ a:hover {
     height: 6px;
   }
 
+  .informations {
+    padding: 15px;
+  }
+
   .informations h2 {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .lang-icon {
@@ -143,17 +151,17 @@ a:hover {
   }
 
   .informations p {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .star-icon {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .details {
-    font-size: 15px;
+    font-size: 13px;
     height: 35px;
-    width: 90%;
+    width: 100%;
   }
 
   .icon {

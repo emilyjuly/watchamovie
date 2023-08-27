@@ -15,7 +15,7 @@
   color: white;
   font-size: 20px;
   font-weight: 600;
-  margin-left: 50px;
+  margin-left: 20px;
   letter-spacing: 1px;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .search-input {
-  margin-left: 50px;
+  margin-left: 20px;
   margin-top: 5px;
   display: flex;
   justify-content: flex-start;

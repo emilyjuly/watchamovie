@@ -36,7 +36,6 @@ const MovieCard = ({ movie, showLink = true }) => {
                     </div>
 
                     <div className="downSide">
-                        <p className="overview">{movie.overview}</p>
                         {showLink && (
                             <Link to={`/movie/${movie.id}`} className="details">
                                 See details
