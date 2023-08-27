@@ -86,18 +86,6 @@ a:hover {
     font-size: 20px;
   }
 
-  .search-container {
-    background-size: 0%;
-    backdrop-filter: 0;
-    transition: none;
-    animation: none;
-    background-image: none;
-  }
-
-  #container-stars {
-    backdrop-filter: none;
-  }
-
   .search-input input {
     width: 80%;
     height: 30px;
