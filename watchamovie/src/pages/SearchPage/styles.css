@@ -9,3 +9,7 @@
   color: aqua;
   text-transform: uppercase;
 }
+
+.search-page-container {
+  padding: 10px;
+}

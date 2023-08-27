@@ -22,7 +22,7 @@ const Search = () => {
   }, [query]);
 
   return (
-    <div className="container">
+    <div className="search-page-container">
       <div className="back-container">
         <Link to="/" className="back">
           <BiArrowBack />
