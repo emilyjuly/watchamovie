@@ -65,7 +65,7 @@ const Movie = () => {
                             </div>
                             <div className="another-infos"><div className="info">
                                 <h3><MdOutlineLanguage className="info-icon" />Original language </h3>
-                                <p>{movie.original_language === 'en' ? 'English' : ''}</p>
+                                <p>{movie.original_language === 'en' ? 'English' : movie.original_language}</p>
                             </div>
                                 <div className="info">
                                     <h3><MdOutlineAttachMoney className="info-icon" />Budget </h3>

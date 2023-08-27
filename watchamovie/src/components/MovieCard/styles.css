@@ -2,7 +2,6 @@
   color: white;
   margin-bottom: 2.5rem;
   display: flex;
-  flex-direction: row;
   background: rgb(40, 40, 55);
   background: linear-gradient(
     344deg,
@@ -142,4 +141,8 @@
 
 .overview {
   width: 70%;
+}
+
+@media (min-width: 1020px) {
+  /* Coloque aqui os estilos que deseja aplicar */
 }

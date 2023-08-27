@@ -35,19 +35,12 @@ const Trending = () => {
             <p className="description-title">Drag to the side and see the movies that are trending today!</p>
 
             <Carousel className="carousel-card">
-                {trendingMovies.length > 0 ? (
+                {trendingMovies.length > 0 && (
                     trendingMovies.map((movie) => (
                         <div key={movie.id}>
                             <MovieCard movie={movie} />
                         </div>
                     ))
-                ) : (
-                    <div className="loader">
-                        <div className="loader-bar bar-1"></div>
-                        <div className="loader-bar bar-2"></div>
-                        <div className="loader-bar bar-3"></div>
-                        <div className="loader-bar bar-4"></div>
-                    </div>
                 )}
             </Carousel>
         </div>

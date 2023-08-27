@@ -31,7 +31,7 @@ const MovieCard = ({ movie, showLink = true }) => {
                         </p>
                         <p>
                             <MdOutlineLanguage className="lang-icon" />
-                            {(movie.original_language = "en" ? "English" : "")}
+                            {(movie.original_language = "en" ? "English" : movie.original_language)}
                         </p>
                     </div>
 

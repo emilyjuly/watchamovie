@@ -72,3 +72,135 @@ a:hover {
     transform: scaleY(1);
   }
 }
+
+@media (max-width: 1020px) {
+  .title {
+    color: white;
+  }
+
+  .navbar-title {
+    font-size: 15px;
+  }
+
+  .phrase {
+    font-size: 20px;
+  }
+
+  .search-input input {
+    width: 80%;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .btn-search {
+    height: 30px;
+    width: 40px;
+  }
+
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movie-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .movie-img img {
+    display: flex;
+    border-radius: 0;
+  }
+
+  .movie-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    max-height: 100%;
+  }
+
+  .top {
+    border-radius: 0;
+  }
+
+  .base {
+    border-radius: 0;
+  }
+
+  .line {
+    height: 6px;
+  }
+
+  .informations h2 {
+    font-size: 20px;
+  }
+
+  .lang-icon {
+    font-size: 15px;
+  }
+
+  .informations p {
+    font-size: 15px;
+  }
+
+  .star-icon {
+    font-size: 15px;
+  }
+
+  .details {
+    font-size: 15px;
+    height: 35px;
+    width: 90%;
+  }
+
+  .icon {
+    height: 35px;
+    width: 20%;
+  }
+
+  .overview {
+    width: 100%;
+  }
+
+  .img_info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .back {
+    font-size: 30px;
+  }
+
+  .movie-informations {
+    width: 100%;
+  }
+
+  .genres {
+    font-size: 10px;
+  }
+
+  .info h3 {
+    font-size: 15px;
+  }
+
+  .info p {
+    font-size: 13px;
+  }
+
+  .info a {
+    font-size: 13px;
+  }
+
+  .info-icon {
+    font-size: 13px;
+  }
+
+  .companies {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+}
