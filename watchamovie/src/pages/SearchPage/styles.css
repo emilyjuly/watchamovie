@@ -1,9 +1,11 @@
 .query-text-title {
   color: white;
   text-align: left;
+  font-size: 16px;
+  padding: 10px;
 }
 
 .query-text {
-  color: rgb(200, 78, 245);
+  color: aqua;
   text-transform: uppercase;
 }

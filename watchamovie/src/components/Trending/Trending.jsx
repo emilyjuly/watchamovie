@@ -22,14 +22,17 @@ const Trending = () => {
         <div className="carousel-container">
             <div className="trending-title">
                 <h2>Trending </h2>
+
                 <div className="playing">
-                    <div className="greenline line-1"></div>
-                    <div className="greenline line-2"></div>
-                    <div className="greenline line-3"></div>
-                    <div className="greenline line-4"></div>
-                    <div className="greenline line-5"></div>
+                    <div className="blueline line-1"></div>
+                    <div className="blueline line-2"></div>
+                    <div className="blueline line-3"></div>
+                    <div className="blueline line-4"></div>
+                    <div className="blueline line-5"></div>
                 </div>
+
             </div>
+            <p className="description-title">Drag to the side and see the movies that are trending today!</p>
 
             <Carousel className="carousel-card">
                 {trendingMovies.length > 0 ? (

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import apiMovieService from "../../services/apiMovieService";
 import MovieCard from "../../components/MovieCard/MovieCard";
 
 import "./styles.css";
+import { BiArrowBack } from "react-icons/bi";
 
 const Search = () => {
   const [searchParams] = useSearchParams();
@@ -22,6 +23,11 @@ const Search = () => {
 
   return (
     <div className="container">
+      <div className="back-container">
+        <Link to="/" className="back">
+          <BiArrowBack />
+        </Link>
+      </div>
       <h2 className="query-text-title">
         Results for: <span className="query-text">{query}</span>
       </h2>
