@@ -86,6 +86,25 @@ a:hover {
     font-size: 20px;
   }
 
+  .search-container {
+    background-size: 0%;
+    backdrop-filter: 0;
+    transition: none;
+    animation: none;
+    background-image: none;
+  }
+
+  .search-input input {
+    width: 80%;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .btn-search {
+    height: 30px;
+    width: 40px;
+  }
+
   .movie-card {
     display: flex;
     flex-direction: column;
@@ -165,6 +184,10 @@ a:hover {
 
   .movie-informations {
     width: 100%;
+  }
+
+  .genres {
+    font-size: 10px;
   }
 
   .info h3 {
