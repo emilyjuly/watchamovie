@@ -1,3 +1,4 @@
+import NowPlaying from "../../components/NowPlaying/NowPlaying";
 import Search from "../../components/Search/Search";
 import Trending from "../../components/Trending/Trending";
 
@@ -11,6 +12,7 @@ const Home = () => {
             </div>
 
             <Trending />
+            <NowPlaying />
         </div>
     );
 };

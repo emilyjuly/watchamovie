@@ -6,6 +6,11 @@ class apiMovieService {
     return data.results;
   }
 
+  static async getNowPlayingMovies() {
+    const { data } = await api_movie.get("movie/now_playing");
+    return data.results;
+  }
+
   static async movieSearch(query) {
     const { data } = await api_movie.get(`search/movie?query=${query}`);
     return data.results;
@@ -19,6 +24,11 @@ class apiMovieService {
   static async getGenres() {
     const { data } = await api_movie.get(`genre/movie/list`);
     return data.genres;
+  }
+
+  static async getLanguages() {
+    const { data } = await api_movie.get("configuration/languages");
+    return data;
   }
 }
 

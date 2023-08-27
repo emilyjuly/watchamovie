@@ -10,12 +10,17 @@ import "./styles.css";
 const Movie = () => {
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
+    const [language, setLanguage] = useState('');
 
     const getMovie = async () => {
         const movie = await apiMovieService.getOnlyMovie(id);
-        console.log(movie)
         setMovie(movie);
     };
+
+    const getLanguage = async () => {
+        const lang = await apiMovieService.getLanguages();
+        setLanguage(lang)
+    }
 
     const formatCurrency = (number) => {
         return number.toLocaleString("en-US", {
@@ -26,6 +31,7 @@ const Movie = () => {
 
     useEffect(() => {
         getMovie();
+        getLanguage()
     }, []);
 
     return (
@@ -42,8 +48,8 @@ const Movie = () => {
                         <div className="movie-img">
                             <img
                                 src={
-                                    movie.poster_path !== null
-                                        ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                                    movie.backdrop_path !== null
+                                        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
                                         : `\popcorn.png`
                                 }
                                 alt={movie.title}
@@ -65,7 +71,9 @@ const Movie = () => {
                             </div>
                             <div className="another-infos"><div className="info">
                                 <h3><MdOutlineLanguage className="info-icon" />Original language </h3>
-                                <p>{movie.original_language === 'en' ? 'English' : movie.original_language}</p>
+                                <p>{language.length > 0 && (language.map((lang) => (
+                                    movie.original_language === lang.iso_639_1 ? lang.english_name : ''
+                                )))}</p>
                             </div>
                                 <div className="info">
                                     <h3><MdOutlineAttachMoney className="info-icon" />Budget </h3>

@@ -4,10 +4,11 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 import "./styles.css";
+import { BiCameraMovie } from "react-icons/bi";
 import { useEffect, useState } from "react";
 import apiMovieService from "../../services/apiMovieService";
 
-const MovieCard = ({ movie, showLink = true }) => {
+const NowPlayingCard = ({ movie, showLink = true }) => {
     const [language, setLanguage] = useState('');
 
     const getLanguage = async () => {
@@ -47,6 +48,10 @@ const MovieCard = ({ movie, showLink = true }) => {
                                 movie.original_language === lang.iso_639_1 ? lang.english_name : ''
                             )))}
                         </p>
+                        <p>
+                            <BiCameraMovie className="lang-icon" />
+                            {(movie.release_date)}
+                        </p>
                     </div>
 
                     <div className="downSide">
@@ -68,4 +73,4 @@ const MovieCard = ({ movie, showLink = true }) => {
     );
 };
 
-export default MovieCard;
+export default NowPlayingCard;
