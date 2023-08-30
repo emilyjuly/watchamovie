@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import apiMovieService from "../../services/apiMovieService";
 import MovieCard from "../MovieCard/MovieCard";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 import "./styles.css";
 
@@ -18,6 +19,43 @@ const Trending = () => {
         getTrendingMovies();
     }, []);
 
+    const handleDragStart = (e) => e.preventDefault();
+
+    const items = trendingMovies.map((movie) => (
+        <div className="carousel-item" key={movie.id}>
+            <img
+                src={movie.imageUrl}
+                onDragStart={handleDragStart}
+                role="presentation"
+            />
+            <MovieCard movie={movie} />
+        </div>
+    ));
+
+    const renderCustomPrevButton = ({ isDisabled }) => (
+        <div className="btn-area-left">
+            <button
+                className={`custom-prev-button ${isDisabled ? "disabled" : ""}`}
+                onClick={() => !isDisabled && carousel.slidePrev()}
+            >
+                <FaChevronLeft className="svg-arrow" />
+            </button>
+        </div>
+    );
+
+    const renderCustomNextButton = ({ isDisabled }) => (
+        <div className="btn-area-rigth">
+            <button
+                className={`custom-next-button ${isDisabled ? "disabled" : ""}`}
+                onClick={() => !isDisabled && carousel.slideNext()}
+            >
+                <FaChevronRight className="svg-arrow" />
+            </button>
+        </div>
+    );
+
+    let carousel;
+
     return (
         <div className="carousel-container">
             <div className="trending-title">
@@ -30,19 +68,23 @@ const Trending = () => {
                     <div className="blueline line-4"></div>
                     <div className="blueline line-5"></div>
                 </div>
-
             </div>
-            <p className="description-title">Drag to the side and see the movies that are trending today!</p>
+            <p className="description-title">
+                Drag to the side and see the movies that are trending today!
+            </p>
 
-            <Carousel className="carousel-card">
-                {trendingMovies.length > 0 && (
-                    trendingMovies.map((movie) => (
-                        <div key={movie.id}>
-                            <MovieCard movie={movie} />
-                        </div>
-                    ))
-                )}
-            </Carousel>
+            <AliceCarousel
+                mouseTracking
+                items={items}
+                responsive={{
+                    0: { items: 2 },
+                    768: { items: 4 },
+                    1024: { items: 5 },
+                }}
+                renderPrevButton={renderCustomPrevButton}
+                renderNextButton={renderCustomNextButton}
+                onInitialized={(e) => (carousel = e)}
+            />
         </div>
     );
 };
