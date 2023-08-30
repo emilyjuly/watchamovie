@@ -1,21 +1,75 @@
 .movie-card {
-    color: white;
-    margin: 10px;
-    display: flex;
-    max-width: 700px;
-    max-height: 670px;
-    flex-direction: column;
-    box-shadow: inset 0px 0px 10px 5px rgba(0, 250, 229, 0.5);
+  color: white;
+  margin: 10px;
+  display: flex;
+  max-width: 800px;
+  max-height: 670px;
+  flex-direction: column;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.movie-card-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Coloque acima da imagem */
+  opacity: 0.8; /* Opacidade da div redonda */
 }
 
 .movie-img {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px 12px 0px 0px;
+  width: 100%;
+  z-index: -1;
 }
 
 .movie-img img {
-    margin: auto;
-    max-height: 100%;
-    max-width: 100%;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.movie-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.552); /* Cor da sobreposição */
+  z-index: 0; /* Coloque atrás da imagem */
+}
+
+.movie-name {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  padding: 8px;
+}
+
+.movie-card-title {
+  font-size: 14px;
+  text-align: left;
+  width: 90%;
+  display: flex;
+  margin-top: 60px;
+}
+
+.movie-card-vote {
+  font-size: 14px;
+  text-align: left;
+}
+
+.movie-name svg {
+  color: rgb(226, 211, 0);
+  margin-right: 3px;
 }

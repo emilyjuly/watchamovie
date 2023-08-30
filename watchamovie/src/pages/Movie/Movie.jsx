@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import apiMovieService from "../../services/apiMovieService";
-import { MdOutlineAttachMoney, MdDescription, MdOutlineLanguage, MdLocalMovies } from 'react-icons/md';
+import { MdOutlineAttachMoney, MdDescription, MdOutlineLanguage } from 'react-icons/md';
 import { BiSolidTimeFive, BiCameraMovie, BiArrowBack } from 'react-icons/bi'
 import { AiOutlineLink } from 'react-icons/ai'
 
@@ -45,7 +45,7 @@ const Movie = () => {
                     </div>
                     <div className="img_info">
 
-                        <div className="movie-img">
+                        <div className="movie-img-page">
                             <img
                                 src={
                                     movie.backdrop_path !== null

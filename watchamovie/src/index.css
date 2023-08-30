@@ -110,12 +110,10 @@ a:hover {
     display: flex;
     justify-content: center;
     width: 100%;
-    border-radius: 0;
   }
 
   .movie-img img {
     display: flex;
-    border-radius: 0;
   }
 
   .movie-info {
@@ -124,18 +122,6 @@ a:hover {
     width: 100%;
     justify-content: center;
     max-height: 100%;
-  }
-
-  .top {
-    border-radius: 0;
-  }
-
-  .base {
-    border-radius: 0;
-  }
-
-  .line {
-    height: 6px;
   }
 
   .informations {
