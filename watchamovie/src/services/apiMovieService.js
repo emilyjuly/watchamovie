@@ -30,6 +30,11 @@ class apiMovieService {
     const { data } = await api_movie.get("configuration/languages");
     return data;
   }
+
+  static async getVideo(id) {
+    const { data } = await api_movie.get(`movie/${id}/videos`);
+    return data.results;
+  }
 }
 
 export default apiMovieService;
