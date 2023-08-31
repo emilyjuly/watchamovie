@@ -5,7 +5,8 @@
 
 .back-search {
   display: flex;
-  text-align: center;
+  justify-content: left;
+  align-items: center;
   font-size: 30px;
   color: #3bf8ff;
 }
