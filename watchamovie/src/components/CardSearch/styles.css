@@ -1,0 +1,27 @@
+.movie-card-search {
+  color: white;
+  margin: 10px;
+  display: flex;
+  max-width: 500px;
+  min-height: 250px;
+  flex-direction: column;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.movie-img-search {
+  display: flex;
+  justify-content: center;
+  border-radius: 12px 12px 0px 0px;
+  width: 100%;
+  height: 550px;
+}
+
+.backdrop-search {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px 12px 0px 0px;
+}

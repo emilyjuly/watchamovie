@@ -1,3 +1,24 @@
+.search-page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-search {
+  display: flex;
+  text-align: center;
+  font-size: 30px;
+  color: #3bf8ff;
+}
+
+.back-search p {
+  font-size: 16px;
+}
+
+.movies-container-search {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
 .query-text-title {
   color: white;
   text-align: left;
