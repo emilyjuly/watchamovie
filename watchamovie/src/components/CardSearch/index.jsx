@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import Avatar from 'react-avatar';
+
 import "./styles.css";
 
-const SearchCard = ({ movie, showLink = true }) => {
+const CardSearch = ({ movie, showLink = true }) => {
     return (
         <Link to={`/movie/${movie.id}`} className="movie-card-link">
             <div className="movie-card-search">
@@ -25,4 +25,4 @@ const SearchCard = ({ movie, showLink = true }) => {
     );
 };
 
-export default SearchCard;
+export default CardSearch;

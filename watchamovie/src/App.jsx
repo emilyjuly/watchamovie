@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar";
-import Search from "./components/Search/Search";
+import NavBar from "./components/NavBar"
 
 import "./App.css";
 

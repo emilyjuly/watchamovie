@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import apiMovieService from "../../services/apiMovieService";
 import { MdOutlineAttachMoney, MdDescription, MdOutlineLanguage } from 'react-icons/md';
 import { BiSolidTimeFive, BiCameraMovie, BiArrowBack } from 'react-icons/bi'
 import { AiOutlineLink } from 'react-icons/ai'
+
+import apiMovieService from "../../services/apiMovieService";
 
 import "./styles.css";
 

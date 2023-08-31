@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import apiMovieService from "../../services/apiMovieService";
-import MovieCard from "../MovieCard/MovieCard";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+
+import apiMovieService from "../../services/apiMovieService";
+import MovieCard from "../MovieCard";
 
 import "./styles.css";
 

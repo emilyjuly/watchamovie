@@ -1,6 +1,5 @@
-// import NowPlaying from "../../components/NowPlaying/NowPlaying";
-import Search from "../../components/Search/Search";
-import Trending from "../../components/Trending/Trending";
+import Search from "../../components/Search";
+import Trending from "../../components/Trending";
 
 import "./styles.css";
 
@@ -12,7 +11,6 @@ const Home = () => {
             </div>
 
             <Trending />
-            {/* <NowPlaying /> */}
         </div>
     );
 };

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
+
 import apiMovieService from "../../services/apiMovieService";
+import CardSearch from "../../components/CardSearch";
 
 import "./styles.css";
-import { BiArrowBack } from "react-icons/bi";
-import SearchCard from "../../components/CardSearch/CardSearch";
 
 const Search = () => {
   const [searchParams] = useSearchParams();
@@ -35,7 +36,7 @@ const Search = () => {
       <div className="movies-container-search">
         {movies.length > 0 ? (
           movies.map((movie) => {
-            return <SearchCard movie={movie} key={movie.id} />;
+            return <CardSearch movie={movie} key={movie.id} />;
           })
         ) : (
           <div className="loader">
