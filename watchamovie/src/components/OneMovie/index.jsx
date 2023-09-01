@@ -14,6 +14,12 @@ import Video from "../Videos";
 
 const OneMovie = ({ movie }) => {
     const [language, setLanguage] = useState("");
+    const [video, setVideo] = useState(null);
+
+    const getVideo = async () => {
+        const video = await apiMovieService.getVideo(movie.id);
+        setVideo(video);
+    };
 
     const getLanguage = async () => {
         const lang = await apiMovieService.getLanguages();
@@ -29,6 +35,7 @@ const OneMovie = ({ movie }) => {
 
     useEffect(() => {
         getLanguage();
+        getVideo();
     }, []);
     return (
         <>
@@ -45,20 +52,20 @@ const OneMovie = ({ movie }) => {
                                 ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
                                 : `\popcorn.png`
                         }
-                        alt={movie.title}
+                        alt={movie.title ? movie.title : ''}
                     />
                 </div>
                 <div className="movie-informations">
                     <div className="title-info-movie">
                         <div className="info-title">
-                            <h2>{movie.title}</h2>
+                            <h2>{movie.title ? movie.title : ''}</h2>
                             <div className="genres-container">
-                                {movie.genres.length > 0 &&
+                                {movie.genres.length > 0 ?
                                     movie.genres.map((genre) => (
                                         <div key={genre.id} className="genres">
                                             {`- ${genre.name} -`}
                                         </div>
-                                    ))}
+                                    )) : ''}
                             </div>
                         </div>
                     </div>
@@ -67,15 +74,15 @@ const OneMovie = ({ movie }) => {
                             <div className="info">
                                 <h3>
                                     <MdOutlineLanguage className="info-icon" />
-                                    Original language{" "}
+                                    Original language
                                 </h3>
                                 <p>
-                                    {language.length > 0 &&
+                                    {language.length > 0 ?
                                         language.map((lang) =>
                                             movie.original_language === lang.iso_639_1
                                                 ? lang.english_name
                                                 : ""
-                                        )}
+                                        ) : ''}
                                 </p>
                             </div>
                             <div className="info">
@@ -83,22 +90,22 @@ const OneMovie = ({ movie }) => {
                                     <MdOutlineAttachMoney className="info-icon" />
                                     Budget{" "}
                                 </h3>
-                                <p>{formatCurrency(movie.budget)}</p>
+                                <p>{formatCurrency(movie.budget ? movie.budget : '')}</p>
                             </div>
                             <div className="info">
                                 <h3>
                                     <BiSolidTimeFive className="info-icon" />
                                     Duration{" "}
                                 </h3>
-                                <p>{movie.runtime} min</p>
+                                <p>{movie.runtime ? movie.runtime : ''} min</p>
                             </div>
                             <div className="info ">
                                 <h3>
                                     <AiOutlineLink className="info-icon" />
-                                    Homepage{" "}
+                                    Homepage
                                 </h3>
-                                <a href={movie.homepage} target="_blank">
-                                    {movie.homepage}
+                                <a className="home-page" href={movie.homepage ? movie.homepage : ''} target="_blank">
+                                    {movie.homepage ? movie.homepage : ''}
                                 </a>
                             </div>
                             <div className="info ">
@@ -106,12 +113,15 @@ const OneMovie = ({ movie }) => {
                                     <BiCameraMovie className="info-icon" />
                                     Release Date{" "}
                                 </h3>
-                                <p>{movie.release_date}</p>
+                                <p>{movie.release_date ? movie.release_date : ''}</p>
                             </div>
                         </div>
-                        <div className="video">
-                            <Video movie={movie} />
-                        </div>
+                        {
+                            video ? <div className="video">
+                                <Video video={video} />
+                            </div> : ''
+                        }
+
                     </div>
                     <div>
                         <div className="info ">
@@ -120,12 +130,12 @@ const OneMovie = ({ movie }) => {
                                     <MdDescription className="info-icon" />
                                     Overview{" "}
                                 </h3>
-                                <p>{movie.overview}</p>
+                                <p>{movie.overview ? movie.overview : ''}</p>
                             </div>
 
                         </div>
                         <div className="movie-companies">
-                            {movie.production_companies.length > 0 &&
+                            {movie.production_companies.length > 0 ?
                                 movie.production_companies.map((companie) => (
                                     <div key={companie.id} className="companies">
                                         <img
@@ -133,7 +143,7 @@ const OneMovie = ({ movie }) => {
                                             alt={companie.name}
                                         />
                                     </div>
-                                ))}
+                                )) : ''}
                         </div>
                     </div>
                 </div>

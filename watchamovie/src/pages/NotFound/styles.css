@@ -1,0 +1,15 @@
+.img-notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-height: 600px;
+  max-width: 600px;
+}
+
+.text-notFound {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 20px;
+}

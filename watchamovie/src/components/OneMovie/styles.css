@@ -36,9 +36,10 @@
 
 .video {
   display: flex;
-  justify-content: center;
-  width: 50%;
+  justify-content: right;
+  width: 70%;
   margin: 10px;
+  margin-right: 50px;
 }
 
 .info {
@@ -54,7 +55,6 @@
 
 .movie-img-page {
   display: flex;
-  justify-content: center;
   width: 30%;
 }
 
@@ -84,16 +84,18 @@
 }
 
 .info p {
+  display: flex;
   font-size: 14px;
-  margin-left: 18px;
   margin-top: 3px;
+  margin-left: 20px;
+  text-align: left;
 }
 
-.info a {
+.home-page {
+  display: flex;
+  margin-left: 20px;
   font-size: 14px;
-  margin-left: 18px;
-  margin-top: 3px;
-  text-decoration: none;
+  text-align: left;
   color: white;
 }
 

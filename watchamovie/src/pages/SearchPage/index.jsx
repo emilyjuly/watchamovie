@@ -4,6 +4,7 @@ import { BiArrowBack } from "react-icons/bi";
 
 import apiMovieService from "../../services/apiMovieService";
 import CardSearch from "../../components/CardSearch";
+import NotFound from "../../pages/NotFound";
 
 import "./styles.css";
 
@@ -24,28 +25,27 @@ const Search = () => {
 
   return (
     <div className="container">
-      <div className="search-page-container">
-        <div className="back-container-search">
-          <Link to="/" className="back-search">
-            <BiArrowBack />
-            <p className="query-text-title">
-              Results for: <span className="query-text">{query}</span>
-            </p>
-          </Link>
-        </div>
+      {movies.length > 0 ? (
+        <div className="search-page-container">
+          <div className="back-container-search">
+            <Link to="/" className="back-search">
+              <BiArrowBack />
+              <p className="query-text-title">
+                Results for: <span className="query-text">{query}</span>
+              </p>
+            </Link>
+          </div>
 
-        <div className="movies-container-search">
-          {movies.length > 0 ? (
-            movies.map((movie) => {
+          <div className="movies-container-search">
+            {movies.map((movie) => {
               return <CardSearch movie={movie} key={movie.id} />;
-            })
-          ) : (
-            ''
-          )}
+            })}
+          </div>
         </div>
-      </div>
+      ) : (
+        <NotFound text={"No results found..."} />
+      )}
     </div>
-
   );
 };
 
