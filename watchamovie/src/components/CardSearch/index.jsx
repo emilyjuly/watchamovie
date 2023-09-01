@@ -16,10 +16,6 @@ const CardSearch = ({ movie, showLink = true }) => {
                         alt={movie.title}
                     />
                 </div>
-                <div className="movie-name">
-                    <p className="movie-card-title">{movie.title}</p>
-                </div>
-
             </div>
         </Link>
     );
