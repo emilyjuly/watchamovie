@@ -33,7 +33,20 @@ a:hover {
     font-size: 20px;
   }
 
-  .search-input input {
+  .search-input {
+    width: 100%;
+  }
+
+  .history-container {
+    top: 85%;
+    font-size: 12px;
+  }
+
+  .history {
+    height: 26px;
+  }
+
+  .input input {
     width: 80%;
     height: 30px;
     font-size: 13px;

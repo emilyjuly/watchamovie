@@ -30,23 +30,63 @@
 }
 
 .search-input {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   margin-left: 20px;
   margin-top: 5px;
-  display: flex;
   justify-content: flex-start;
 }
 
-.search-input input {
-  width: 50%;
+.input {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.input input {
+  display: flex;
   height: 36px;
   padding: 10px;
   font-size: 16px;
+  width: 95%;
+  border-radius: 4px 0px 0px 4px;
+  outline: none;
+  border: none;
+  height: 35px;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 82%;
+  z-index: 1;
+  width: 47%;
+}
+
+.history {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 30px;
+  padding: 10px;
+  font-size: 14px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  color: white;
+  cursor: pointer;
 }
 
 .btn-search {
-  background-color: #181818;
-  height: 36px;
-  width: 40px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  height: 35px;
+  width: 6%;
   outline: none;
   border: none;
   border-radius: 0px 5px 5px 0px;
@@ -57,42 +97,4 @@
 .btn-search:hover {
   transition: 0.5s;
   background: linear-gradient(90deg, rgb(0, 0, 209) 0%, #3bf8ff 100%);
-}
-
-.input {
-  height: 30px;
-  width: 300px;
-  border-radius: 5px 0px 0px 5px;
-  outline: none;
-  border: none;
-  padding: 5px;
-}
-
-.btn {
-  background-color: rgb(150, 0, 209);
-  color: white;
-  height: 30px;
-  width: 40px;
-  border: none;
-  outline: none;
-  border-radius: 0px 5px 5px 0px;
-  transition: 0.4s;
-}
-
-.btn:hover {
-  background: linear-gradient(90deg, #efd5ff 0%, rgb(150, 0, 209) 100%);
-}
-
-@keyframes gradient_301 {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
 }
