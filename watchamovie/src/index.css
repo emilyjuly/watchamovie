@@ -39,6 +39,12 @@ a:hover {
     font-size: 13px;
   }
 
+  .search-page-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
   .btn-search {
     height: 30px;
     width: 40px;
@@ -88,7 +94,9 @@ a:hover {
   }
 
   .movies-container-search {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    max-width: 100%;
   }
 
   .movie-card-search {
