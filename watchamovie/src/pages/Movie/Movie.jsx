@@ -18,15 +18,18 @@ const Movie = () => {
         getMovie();
     }, []);
     return (
-        <div className="movie-page">
-            {movie ? (
-                <>
-                    <OneMovie movie={movie} />
-                </>
-            ) : (
-                ""
-            )}
+        <div className="container">
+            <div className="movie-page">
+                {movie ? (
+                    <>
+                        <OneMovie movie={movie} />
+                    </>
+                ) : (
+                    ""
+                )}
+            </div>
         </div>
+
     );
 };
 

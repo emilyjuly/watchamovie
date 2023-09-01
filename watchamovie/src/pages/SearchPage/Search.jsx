@@ -23,26 +23,29 @@ const Search = () => {
   }, [query]);
 
   return (
-    <div className="search-page-container">
-      <div className="back-container-search">
-        <Link to="/" className="back-search">
-          <BiArrowBack />
-          <p className="query-text-title">
-            Results for: <span className="query-text">{query}</span>
-          </p>
-        </Link>
-      </div>
+    <div className="container">
+      <div className="search-page-container">
+        <div className="back-container-search">
+          <Link to="/" className="back-search">
+            <BiArrowBack />
+            <p className="query-text-title">
+              Results for: <span className="query-text">{query}</span>
+            </p>
+          </Link>
+        </div>
 
-      <div className="movies-container-search">
-        {movies.length > 0 ? (
-          movies.map((movie) => {
-            return <CardSearch movie={movie} key={movie.id} />;
-          })
-        ) : (
-          ''
-        )}
+        <div className="movies-container-search">
+          {movies.length > 0 ? (
+            movies.map((movie) => {
+              return <CardSearch movie={movie} key={movie.id} />;
+            })
+          ) : (
+            ''
+          )}
+        </div>
       </div>
     </div>
+
   );
 };
 
