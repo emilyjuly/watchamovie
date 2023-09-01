@@ -115,11 +115,14 @@ const OneMovie = ({ movie }) => {
                     </div>
                     <div>
                         <div className="info ">
-                            <h3>
-                                <MdDescription className="info-icon" />
-                                Overview{" "}
-                            </h3>
-                            <p>{movie.overview}</p>
+                            <div className="overview">
+                                <h3>
+                                    <MdDescription className="info-icon" />
+                                    Overview{" "}
+                                </h3>
+                                <p>{movie.overview}</p>
+                            </div>
+
                         </div>
                         <div className="movie-companies">
                             {movie.production_companies.length > 0 &&
