@@ -3,9 +3,9 @@
 .carousel-container {
   width: 100%;
   display: flex;
-  padding: 5px;
+  justify-content: center;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .trending-title {
@@ -20,12 +20,12 @@
   padding-left: 10px;
   margin-bottom: 5px;
   color: #c5d1d1;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .trending-title h2 {
   color: #00e7e7;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 300;
 }
 
@@ -72,47 +72,28 @@
 }
 
 .btn-area-left {
-  display: flex;
-  width: 100%;
-  justify-content: left;
+  position: absolute;
+  top: 13rem;
+  left: 0;
 }
 
 .btn-area-rigth {
-  display: flex;
-  width: 100%;
-  justify-content: right;
+  position: absolute;
+  top: 13rem;
+  right: 0;
 }
 
-.btn-area-left button {
+button {
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   width: 40px;
   height: 40px;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: #4ABCC1;
   cursor: pointer;
-  border-radius: 20px;
-  color: white;
-}
-
-.btn-area-rigth button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  width: 40px;
-  height: 40px;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  color: white;
-  cursor: pointer;
-  border-radius: 20px;
+  border-radius: 50%;
+  color: black;
 }
 
 .svg-arrow {

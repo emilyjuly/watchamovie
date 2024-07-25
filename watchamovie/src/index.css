@@ -7,13 +7,11 @@
 
 body {
   background-color: #181818;
-  color: #1500fd;
   transition: 0.5s;
 }
 
 a {
   text-decoration: none;
-  color: #1500fd;
 }
 
 a:hover {
@@ -31,6 +29,10 @@ a:hover {
 
   .phrase {
     font-size: 20px;
+  }
+
+  .description-title {
+    font-size: 14px;
   }
 
   .search-input {
@@ -103,7 +105,6 @@ a:hover {
 
   .movie-companies {
     margin-top: 5px;
-    border-top: 1px solid #3bf8ff;
   }
 
   .movies-container-search {

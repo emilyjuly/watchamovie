@@ -2,4 +2,17 @@
   display: flex;
   width: 100%;
   box-shadow: #3bf8ffb1 0px 0px 20px 0px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: #3bf8ffb1 0px 0px 20px 0px;
+  }
+  50% {
+    box-shadow: #3bf8ffb1 0px 0px 30px 10px;
+  }
+  100% {
+    box-shadow: #3bf8ffb1 0px 0px 20px 0px;
+  }
 }

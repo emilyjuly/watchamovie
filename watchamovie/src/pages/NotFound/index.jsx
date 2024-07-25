@@ -12,7 +12,6 @@ const NotFound = ({ text }) => {
                 </Link>
             </div>
             <p className="text-notFound">{text}</p>
-            <img className="img-notFound" src="/notfound.png" alt="Not Found" />
         </div>
     );
 };

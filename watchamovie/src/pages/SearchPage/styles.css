@@ -8,7 +8,7 @@
   justify-content: left;
   align-items: center;
   font-size: 30px;
-  color: #3bf8ff;
+  color: #4ABCC1;
 }
 
 .back-search p {
@@ -28,8 +28,7 @@
 }
 
 .query-text {
-  color: aqua;
-  text-transform: uppercase;
+  color: #4ABCC1;
 }
 
 .search-page-container {

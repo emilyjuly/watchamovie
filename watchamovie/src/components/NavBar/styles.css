@@ -3,25 +3,25 @@
 nav {
     display: flex;
     justify-content: space-between;
-    height: 40px;
-    border-bottom: 3px solid #3bf8ff;
+    border-bottom: 3px solid #4ABCC1;
+    padding: 10px;
 }
 
 .logo-space {
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .title {
     font-family: "Audiowide", cursive;
-    font-size: 16px;
+    font-size: 24px;
     display: flex;
-    padding: 10px;
-    margin: auto;
+    margin-top: 6px;
     color: white;
 }
 
 .logo {
-    margin: auto;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
 }

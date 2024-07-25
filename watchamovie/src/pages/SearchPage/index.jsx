@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { BiArrowBack } from "react-icons/bi";
+import React, { useEffect, useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
 
-import apiMovieService from "../../services/apiMovieService";
-import CardSearch from "../../components/CardSearch";
-import NotFound from "../../pages/NotFound";
+import apiMovieService from '../../services/apiMovieService';
+import CardSearch from '../../components/CardSearch';
+import NotFound from '../../pages/NotFound';
 
-import "./styles.css";
+import './styles.css';
 
 const Search = () => {
   const [searchParams] = useSearchParams();
 
   const [movies, setMovies] = useState([]);
-  const query = searchParams.get("q");
+  const query = searchParams.get('q');
 
   const getMovies = async () => {
     const movies = await apiMovieService.movieSearch(query);
@@ -43,7 +43,7 @@ const Search = () => {
           </div>
         </div>
       ) : (
-        <NotFound text={"No results found..."} />
+        <NotFound text={'No results found...'} />
       )}
     </div>
   );
